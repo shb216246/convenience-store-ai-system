@@ -1,0 +1,32 @@
+# FastAPI Backend
+fastapi==0.109.0
+uvicorn==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.3
+
+# LangChain & AI
+langchain==0.1.4
+langchain-openai==0.0.5
+langchain-community==0.0.16
+langgraph==0.0.20
+openai==1.10.0
+
+# Data Processing
+pandas==2.2.0
+numpy==1.26.3
+python-dateutil==2.8.2
+
+# Vector Store & Embeddings
+chromadb==0.4.22
+faiss-cpu==1.7.4
+
+# API Clients
+requests==2.31.0
+httpx==0.26.0
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Database
+mysql-connector-python==8.3.0
