@@ -17,6 +17,16 @@
 편의점 운영자를 위한 AI 기반 자동 발주 시스템입니다. 
 판매 데이터, 재고 현황, 날씨 정보 등을 종합 분석하여 최적의 발주 추천을 제공합니다.
 
+### ✨ 프로젝트 하이라이트
+
+> **멀티에이전트 시스템**과 **RAG(Retrieval-Augmented Generation)** 기술을 활용한 지능형 발주 시스템
+
+- 🎯 **4개의 전문화된 AI 에이전트**가 협업하여 최적의 발주 결정
+- 📚 **RAG 시스템**으로 상품 지식베이스 기반 정확한 답변 제공
+- 🔄 **실시간 데이터 분석** 및 트렌드 예측
+- 💡 **TypeScript + React Query**로 타입 안전성과 효율적인 상태 관리
+- 🎨 **Framer Motion**을 활용한 부드러운 UI/UX
+
 ### 🎯 주요 기능
 
 - **🤖 AI 챗봇**: RAG 기반 대화형 인터페이스로 재고 관리 질문 응답
@@ -128,14 +138,51 @@ RAG 기반 AI가 재고 관리, 발주 관련 질문에 정확하게 답변합�
 
 ![발주 이력](screenshots/order_history.png)
 
-## 🎓 배운 점 및 성과
+## 💻 기술적 구현 상세
 
-### 기술적 성과
-- ✅ 멀티에이전트 시스템 설계 및 구현
-- ✅ RAG 기반 AI 챗봇 구축
-- ✅ React Query를 활용한 효율적인 상태 관리
-- ✅ TypeScript로 타입 안전성 확보
-- ✅ FastAPI로 고성능 백엔드 구축
+### 멀티에이전트 시스템 아키텍처
+
+**Coordinator 패턴 기반 에이전트 협업**
+- `CoordinatorAgent`: 전체 워크플로우 조율 및 에이전트 간 통신 관리
+- `DataAnalysisAgent`: 판매 데이터 분석 및 트렌드 예측
+- `InventoryAgent`: 재고 현황 모니터링 및 안전 재고 계산
+- `OrderAgent`: 최종 발주 결정 및 실행
+
+**에이전트 간 통신**
+```python
+# 순차적 워크플로우로 각 에이전트의 분석 결과를 다음 에이전트에 전달
+coordinator.run_workflow() → 
+  data_analysis → inventory_check → order_decision
+```
+
+### RAG (Retrieval-Augmented Generation) 시스템
+
+**벡터 데이터베이스 기반 지식 검색**
+- **ChromaDB**를 활용한 상품 정보 임베딩 저장
+- **OpenAI Embeddings**로 의미 기반 검색
+- **LangChain**으로 검색 결과와 GPT-4 통합
+
+**구현 특징**
+- 상품 매뉴얼, 판매 패턴, 재고 관리 가이드를 벡터화하여 저장
+- 사용자 질문에 대해 관련 문서를 검색 후 GPT-4로 답변 생성
+- 컨텍스트 기반 정확한 답변 제공
+
+### 프론트엔드 최적화
+
+**React Query를 활용한 서버 상태 관리**
+```typescript
+// 자동 캐싱, 백그라운드 리페칭, 에러 처리
+const { data, isLoading, error } = useQuery({
+  queryKey: ['stats'],
+  queryFn: fetchStats,
+  staleTime: 5 * 60 * 1000, // 5분 캐싱
+});
+```
+
+**성능 최적화**
+- React Query로 불필요한 API 호출 최소화
+- Framer Motion으로 부드러운 페이지 전환
+- 로딩 스켈레톤 UI로 사용자 경험 개선
 
 ### 문제 해결 경험
 
