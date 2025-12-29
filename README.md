@@ -7,6 +7,11 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.6-green)](https://fastapi.tiangolo.com/)
 [![Python](https://img.shields.io/badge/Python-3.11+-green)](https://www.python.org/)
 
+## 🔗 링크
+
+- **GitHub Repository**: [https://github.com/shb216246/convenience-store-ai-system](https://github.com/shb216246/convenience-store-ai-system)
+- **Live Demo**: 배포 예정 (Vercel + Railway)
+
 ## 📌 프로젝트 소개
 
 편의점 운영자를 위한 AI 기반 자동 발주 시스템입니다. 
@@ -106,14 +111,22 @@ http://localhost:3000
 ### 대시보드
 실시간 판매 통계, 재고 현황, 트렌드 분석을 한눈에 확인할 수 있습니다.
 
+![대시보드](screenshots/dashboard.png)
+
 ### AI 챗봇
 RAG 기반 AI가 재고 관리, 발주 관련 질문에 정확하게 답변합니다.
+
+![AI 챗봇](screenshots/chatbot.png)
 
 ### 발주 추천
 멀티에이전트 시스템이 분석한 최적의 발주 추천을 제공합니다.
 
+![발주 추천](screenshots/order_recommendations.png)
+
 ### 발주 이력
 과거 발주 내역과 통계를 확인하고 분석할 수 있습니다.
+
+![발주 이력](screenshots/order_history.png)
 
 ## 🎓 배운 점 및 성과
 
@@ -182,11 +195,12 @@ VITE_APP_NAME=편의점 AI 자동 발주 시스템
 MIT License
 
 ## 👤 개발자
-**Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- Email: your.email@example.com
-- Portfolio: https://your-portfolio.com
+**shb216246**
+- GitHub: [@shb216246](https://github.com/shb216246)
+- Email: shb216246@gmail.com
+- Portfolio: https://github.com/shb216246
 
 ## 🙏 감사의 말
 이 프로젝트는 실제 편의점 운영의 어려움을 해결하기 위해 시작되었습니다.
 AI 기술을 활용하여 소상공인의 업무 효율을 높이는 것이 목표입니다.
+"# convenience-store-ai-system" 
